@@ -13,7 +13,8 @@ const Header = () => {
                 </p>
                 <p className='text-white mt-2 md:mt-3 text-justify text-[18px] font-bold'>Exercise and physical activity are great ways to feel better</p>
 
-                <button className="bg-orange-500 text-white text-[22px] border-2 border-orange-500 duration-500 easy-in-out hover:bg-transparent font-bold py-2 px-3" onClick={() => navigate("/services")}>Book Now</button>
+                {/* navitage service page button */}
+                <button className="bg-gradient-to-r from-orange-500 to-orange-300 text-white text-[22px] border-2 border-orange-500 duration-500 easy-in-out hover:from-orange-300 hover:to-orange-500 font-bold py-2 px-3" onClick={() => navigate("/services")}>Book Now</button>
             </div>
         </header>
     );
