@@ -26,6 +26,12 @@ const NavBar = () => {
                             <li className='py-2 px-3'>
                                 <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/services">Services</NavLink>
                             </li>
+                            <li className='py-2 px-3'>
+                                <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/checkout">Check Out</NavLink>
+                            </li>
+                            <li className='py-2 px-3'>
+                                <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/about">About Me</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>
