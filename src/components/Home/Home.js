@@ -2,11 +2,12 @@ import React from 'react';
 import Card from '../Card/Card';
 import Header from './Header';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import useData from '../../hooks/useData';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+SwiperCore.use([Autoplay]);
 
 const Home = () => {
     const data = useData();
@@ -20,6 +21,10 @@ const Home = () => {
                 spaceBetween={30}
                 slidesPerGroup={3}
                 loop={true}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false
+                }}
                 loopFillGroupWithBlank={true}
                 pagination={{
                     clickable: true,
