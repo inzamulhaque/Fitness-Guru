@@ -1,0 +1,7 @@
+.min-h {
+    min-height: 100vh;
+}
+
+.h-bg {
+    background-image: url("./images/h-bg.jpg");
+}
