@@ -5,7 +5,7 @@ const Card = ({ data }) => {
     const { id, name, description, price, img } = data || {}; //for error handeling
     return (
         <>
-            <div className=' my-2 py-2 px-3 card h-100 mx-auto'>
+            <div className='my-2 py-2 px-3 card h-100 mx-auto'>
                 <div className="w-[60px] h-[50px] mx-auto">
                     <img src={img} className='w-full ' />
                 </div>

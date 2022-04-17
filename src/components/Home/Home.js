@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Card from '../Card/Card';
 import Header from './Header';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,6 +7,7 @@ import useData from '../../hooks/useData';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Quotes from './Quotes';
 SwiperCore.use([Autoplay]);
 
 const Home = () => {
@@ -15,8 +16,9 @@ const Home = () => {
         <>
             {/* add header */}
             <Header />
-            {/* show all products in slider */}
+            {/* show all products in testimonials slider */}
             <div className="container mx-auto">
+                <h3 className='text-center font-bold text-[30px] my-2 text-blue-500'>Our Services</h3>
                 <Swiper
                     loop={true}
                     pagination={{
@@ -47,14 +49,14 @@ const Home = () => {
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    {/* <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> */}
                     {
                         data.map(item => <SwiperSlide key={item.id}>
                             <Card data={item} />
                         </SwiperSlide>)
                     }
-                    {/* </div> */}
                 </Swiper>
+                {/* add quotes */}
+                <Quotes />
             </div>
         </>
     );
