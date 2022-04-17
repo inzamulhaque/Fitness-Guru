@@ -8,11 +8,12 @@ import Services from './components/Services/Services';
 import CheckOut from './components/CheckOut/CheckOut';
 import SignIn from './components/SignForms/SignIn';
 import SignUp from './components/SignForms/SignUp';
+import ResetPass from './components/SignForms/ResetPass';
 
 function App() {
   return (
     // display flex for footer
-    <div className='flex flex-col justify-between min-h mx-2'>
+    <div className='flex flex-col justify-between min-h'>
       <div>
         <NavBar />
         <Routes>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/reset" element={<ResetPass />} />
         </Routes>
       </div>
       <Footer />

@@ -3,9 +3,18 @@ import logo from "../../images/icons/dumbbell.png";
 import menu from "../../images/icons/menu.png";
 import close from "../../images/icons/close.png";
 import { NavLink, Link } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [user, loading, error] = useAuthState(auth);
+
+    // handle sign out
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
         <>
             <nav>
@@ -36,7 +45,7 @@ const NavBar = () => {
                                 <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/blogs">Blogs</NavLink>
                             </li>
                             <li className='py-2 px-3'>
-                                <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/signin">SignIn</NavLink>
+                                {!user ? <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/signin">SignIn</NavLink> : <p className='text-red-400 cursor-pointer' onClick={handleSignOut}>SignOut</p>}
                             </li>
                         </ul>
                     </div>
