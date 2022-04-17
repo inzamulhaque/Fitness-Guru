@@ -12,6 +12,7 @@ import ResetPass from './components/SignForms/ResetPass';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import NotFound from './components/NotFound/NotFound';
 import About from './components/About/About';
+import Blogs from './components/Blogs/Blogs';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <CheckOut />
           </RequireAuth>} />
           <Route path="/about" element={<About />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/reset" element={<ResetPass />} />

@@ -3,5 +3,16 @@
         "id": 1,
         "question": "Difference between authorization and authentication?",
         "answer": "সহজভাবে বলতে গেলে authentication হল কেউ কে তা যাচাই করার প্রক্রিয়া এবং authorization হল ব্যবহারকারীর কোন নির্দিষ্ট অ্যাপ্লিকেশন, ফাইল এবং ডেটাতে অ্যাক্সেস রয়েছে তা যাচাই করার প্রক্রিয়া।"
+    },
+    {
+        "id": 2,
+        "question": "Why are you using firebase? What other options do you have to implement authentication?",
+        "answer": "client-side code থেকে সরাসরি ডাটাবেসে নিরাপদে access এর অনুমতি দেয় এতে খুব সহজে applications তৈরি করা যায়।",
+        "answer2": "There are many options. E.g. Parse, Back4App, AWS Amplify, Kuzzle, Couchbase, NativeScript, RxDB, etc."
+    },
+    {
+        "id": 3,
+        "question": "What other services does firebase provide other than authentication?",
+        "answer": "There are many services which Firebase provides, Most useful of them are: Cloud Firestore, Cloud Functions, Hosting, Cloud Storage, Google Analytics, Real Time Database, etc."
     }
 ]
