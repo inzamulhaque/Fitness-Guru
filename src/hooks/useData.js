@@ -4,7 +4,7 @@ const useData = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("data.json")
+        fetch("https://inzamulhaque.github.io/pHero-assignment-10-fake-data/data.json")
             .then(res => res.json())
             .then(data => setData(data));
     }, []);

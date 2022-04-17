@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
+import ReadMore from './components/Card/ReadMore';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/readmore/:id" element={<ReadMore />} />
         </Routes>
       </div>
       <Footer />
