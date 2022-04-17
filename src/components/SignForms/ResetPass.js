@@ -35,6 +35,9 @@ const ResetPass = () => {
                     <button type="submit" className='py-2 px-7 bg-blue-500 text-white font-bold text-[22px] border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 duration-500 ease-in-out rounded-md mt-3 block md:inline-block mx-auto'>Reset Password</button>
 
                 </form>
+
+                {error && <p className="text-[18px] font-normal text-red-400 before:content-['X'] before:text-[20px] before:mr-2 before:text-red-500">{error.code}</p>}
+
                 <p className="text-[18px] font-normal"> <span className="text-orange-300 cursor-pointer" onClick={() => navigate("/signin")}>Go To Sign In </span>
                 </p>
                 <ToastContainer />

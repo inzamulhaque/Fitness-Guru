@@ -1,0 +1,7 @@
+[
+    {
+        "id": 1,
+        "question": "Difference between authorization and authentication?",
+        "answer": "সহজভাবে বলতে গেলে authentication হল কেউ কে তা যাচাই করার প্রক্রিয়া এবং authorization হল ব্যবহারকারীর কোন নির্দিষ্ট অ্যাপ্লিকেশন, ফাইল এবং ডেটাতে অ্যাক্সেস রয়েছে তা যাচাই করার প্রক্রিয়া।"
+    }
+]

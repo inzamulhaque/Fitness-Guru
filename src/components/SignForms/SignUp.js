@@ -4,6 +4,7 @@ import SocialBtn from './SocialBtn';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
 import { signOut } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
 
 const SignUp = () => {
     const [
@@ -59,6 +60,15 @@ const SignUp = () => {
         event.preventDefault();
         if (password === cPassword) {
             createUserWithEmailAndPassword(email, password);
+            toast.success('Please Verify Your Email And Sign In!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         } else {
             setMyError("password and confirm password are not match");
         }
@@ -83,6 +93,7 @@ const SignUp = () => {
                     You've An Account? <span className="text-orange-300 cursor-pointer" onClick={() => navigate("/signin")}> Sign In </span>
                 </p>
                 <SocialBtn />
+                <ToastContainer />
             </div>
         </>
     );
