@@ -1,7 +1,9 @@
 import React from 'react';
 import ShortText from './ShortText';
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ data }) => {
+    const navigate = useNavigate();
     const { id, name, description, price, img } = data || {}; //for error handeling
     return (
         <>
@@ -16,7 +18,7 @@ const Card = ({ data }) => {
                     </p>
                     <p className='text-[20px] font-medium'>${price} <span className='text-[16px] font-light'>Monthly</span> </p>
 
-                    <button className='bg-blue-500 text-white text-[22px] font-bold hover:text-blue-500 hover:bg-white border-2 border-blue-500 duration-500 easy-in-out py-2 px-3 rounded-md'>Check Out</button>
+                    <button className='bg-blue-500 text-white text-[22px] font-bold hover:text-blue-500 hover:bg-white border-2 border-blue-500 duration-500 easy-in-out py-2 px-3 rounded-md' onClick={()=>navigate(`/checkout/${id}`)}>Check Out</button>
                 </div>
             </div>
         </>

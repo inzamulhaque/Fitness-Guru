@@ -19,7 +19,7 @@ const NavBar = () => {
                             menuOpen ? <img onClick={() => setMenuOpen(!menuOpen)} src={close} alt="menu icon" className='w-[30px] h-[30px] lg:hidden' /> :
                                 <img onClick={() => setMenuOpen(!menuOpen)} src={menu} alt="menu icon" className='w-[30px] h-[30px] lg:hidden' />
                         }
-                        <ul className={`text-white text-[22px] lg:flex items-center lg:top-0 lg:relative font-semibold absolute duration-300 ease-in-out ${menuOpen ? "top-15 bg-black left-0 w-full text-left px-5 py-7" : "top-[-300px]"}`}>
+                        <ul className={`text-white text-[18px] lg:flex items-center lg:top-0 lg:relative font-semibold absolute duration-300 ease-in-out ${menuOpen ? "top-15 bg-black left-0 w-full text-left px-5 py-7" : "top-[-300px]"}`}>
                             <li className='py-2 px-3'>
                                 <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/">Home</NavLink>
                             </li>
@@ -31,6 +31,12 @@ const NavBar = () => {
                             </li>
                             <li className='py-2 px-3'>
                                 <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/about">About Me</NavLink>
+                            </li>
+                            <li className='py-2 px-3'>
+                                <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/blogs">Blogs</NavLink>
+                            </li>
+                            <li className='py-2 px-3'>
+                                <NavLink className={({ isActive }) => isActive ? "text-blue-500 font-bold" : "text-white lg:text-black"} to="/signin">SignIn</NavLink>
                             </li>
                         </ul>
                     </div>
