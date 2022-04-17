@@ -57,7 +57,7 @@ const Home = () => {
                 </Swiper>
                 {/* add quotes */}
                 <Quotes />
-            </div>
+            </div> * /}
         </>
     );
 };

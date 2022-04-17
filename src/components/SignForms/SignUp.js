@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import SocialBtn from './SocialBtn';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
+import { signOut } from 'firebase/auth';
 
 const SignUp = () => {
     const [
@@ -33,6 +34,13 @@ const SignUp = () => {
         } else {
             setMyError("");
         }
+    }
+
+    if (user && (!error && !loading)) {
+        // for auto sign in
+        navigate("/signin");
+        // stop auto sign in
+        signOut(auth);
     }
 
     const handleConfirmPasswordChange = event => {
