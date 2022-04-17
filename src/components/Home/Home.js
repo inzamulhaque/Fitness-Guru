@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Card from '../Card/Card';
 import Header from './Header';
 import { Swiper, SwiperSlide } from "swiper/react";
