@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import './App.css';
 import ReadMore from './components/Card/ReadMore';
 import Footer from './components/Footer/Footer';

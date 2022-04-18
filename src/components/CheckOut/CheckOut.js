@@ -29,7 +29,7 @@ const CheckOut = () => {
         });
     }
     return (
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
             <div className="px-3">
                 <img src={img} alt="Product Image" className='w-[50px] h-[50px] mx-auto' />
                 <h3 className="text-center text-[24px]"> Name: {name} </h3>
@@ -40,7 +40,7 @@ const CheckOut = () => {
                 <button className="py-2 px-3 bg-blue-500 text-white text-[22px] font-bold">Pay Now</button>
             </div>
 
-            <div className="px-3 card">
+            <div className="mt-5 lg:mt-0 px-3 card">
                 <form onSubmit={handleBookNow} className="p-3 md:px-5 lg:px-7">
                     <input type="text" name="name" placeholder='Enter Your Name*' className='w-full border-b-2 border-black focus:outline-none py-2 px-5 text-[22px]' required />
                     <input type="email" placeholder='Enter Your Email*' className='w-full border-b-2 border-black focus:outline-none py-2 px-5 text-[22px]' required />
