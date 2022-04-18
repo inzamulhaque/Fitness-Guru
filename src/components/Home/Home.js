@@ -8,6 +8,7 @@ import useData from '../../hooks/useData';
 import "swiper/css";
 import "swiper/css/pagination";
 import Quotes from './Quotes';
+import ContactForm from './ContactForm';
 SwiperCore.use([Autoplay]);
 
 const Home = () => {
@@ -55,9 +56,11 @@ const Home = () => {
                         </SwiperSlide>)
                     }
                 </Swiper>
+                {/* add contact form */}
+                <ContactForm />
                 {/* add quotes */}
                 <Quotes />
-            </div> * /}
+            </div>
         </>
     );
 };
