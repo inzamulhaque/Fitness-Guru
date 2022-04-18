@@ -85,7 +85,9 @@ const SignUp = () => {
                     <input onChange={handleConfirmPasswordChange} type="password" placeholder='Enter Your Confirm Password*' className='w-full border-b-2 border-black focus:outline-none py-2 px-5 text-[22px]' required />
 
                     {(myError || error) && <p className="text-[18px] font-normal text-red-400 before:content-['X'] before:text-[20px] before:mr-2 before:text-red-500">{myError || error.code}</p>}
-
+                    <p>
+                        <input type="checkbox" required /> agree with terms and conditions
+                    </p>
                     <button type="submit" className='py-2 px-7 bg-blue-500 text-white font-bold text-[22px] border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 duration-500 ease-in-out rounded-md mt-3 block md:inline-block mx-auto'>Sign Up</button>
 
                 </form>

@@ -3,10 +3,19 @@ import googleIcon from './../../images/icons/google.png';
 import githubIcon from './../../images/icons/github.png';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { useLocation, useNavigate } from 'react-router';
 
 const SocialBtn = () => {
     const [signInWithGoogle, gooleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, user, loading, error] = useSignInWithGithub(auth);
+
+    const navigate = useNavigate();
+    let location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    if (user || gooleUser && (!googleLoading && !loading)) {
+        navigate(from, { replace: true });
+    }
 
     return (
         <>

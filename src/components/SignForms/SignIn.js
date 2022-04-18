@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SocialBtn from './SocialBtn';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 const SignIn = () => {
     const navigate = useNavigate();
@@ -14,10 +14,11 @@ const SignIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [signInuser, signInloading, signInError] = useAuthState(auth);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    if (user) {
+    if (user || (signInuser && !signInloading)) {
         navigate(from, { replace: true });
     }
 
