@@ -46,6 +46,10 @@
     height: 90vh;
 }
 
+.h-50vh {
+    height: 50vh;
+}
+
 /* .swiper-slide div {
     display: block;
     width: auto;
